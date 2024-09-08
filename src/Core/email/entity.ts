@@ -3,6 +3,15 @@ export type argProps = {
     data: any,
 }
 
+export interface IEmail {
+    to: string | string[],
+    subject: string,
+    template: IEmailTemplate,
+    data: any
+    userId?: string
+    message?: string
+}
+
 export interface IToEmail {
     email: string,
     name: string
