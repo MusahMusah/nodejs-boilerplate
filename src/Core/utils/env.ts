@@ -14,5 +14,6 @@ export const env = cleanEnv(process.env, {
     SENDER_NAME: str(),
     SENDER_EMAIL: str(),
     MAILGUN_API_KEY: str(),
+    MAILGUN_DOMAIN: str(),
     BASE_URL: str(),
 });
