@@ -1,13 +1,16 @@
 import express, {Application, NextFunction, Request, Response} from "express";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 import {Register} from "../Register";
+import { CORS_CONFIG } from "../config/cors";
 
 export const handlers = (app: Application): void => {
     app.use(express.json());
     app.use(cookieParser());
     app.use(express.urlencoded({extended: true}));
     app.use(helmet());
+    app.use(cors(CORS_CONFIG));
 
     app.set('trust proxy', 1);
     app.get('/ip', (request, response) => response.send(request.ip))
