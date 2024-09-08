@@ -1,0 +1,51 @@
+{
+  "name": "nodejs-boilerplate",
+  "version": "1.0.0",
+  "description": "Nodejs Express & Typescript Boilerplate",
+  "main": "index.js",
+  "repository": "git@github.com:MusahMusah/nodejs-boilerplate.git",
+  "author": "MusahMusah <aliyumusahmusah@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "Node",
+    "Typescript",
+    "Boilerplate",
+    "Express"
+  ],
+  "scripts": {
+    "build": "rm -rf build/ && tsc",
+    "dev": "nodemon src/Bootstrap.ts",
+    "start": "node build/src/Bootstrap.js",
+    "test": "export NODE_ENV=test PORT=9095 && jest"
+  },
+  "dependencies": {
+    "@typegoose/typegoose": "^12.7.0",
+    "async-lock": "^1.4.1",
+    "axios": "^1.7.7",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "detect-port": "^1.6.1",
+    "dotenv": "^16.4.5",
+    "envalid": "^8.0.0",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "moment": "^2.30.1",
+    "mongodb-memory-server": "^10.0.0",
+    "mongoose": "^8.6.1",
+    "numbro": "^2.5.0",
+    "redis": "^4.7.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/async-lock": "^1.4.2",
+    "@types/bcrypt": "^5.0.2",
+    "@types/cookie-parser": "^1.4.7",
+    "@types/detect-port": "^1.3.5",
+    "@types/express": "^4.17.21",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
