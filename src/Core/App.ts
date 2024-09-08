@@ -41,7 +41,7 @@ export class App {
             App.uri = App.mongoMemory.getUri();
         }
 
-        //make the connection!!!
+        // make the connection!!!
         mongoose.set('strictQuery', false);
         mongoose.connect(App.uri).then(() => {
             try {
